@@ -37,6 +37,7 @@ p{color:var(--muted);font-size:18px}
 
 /* HERO */
 .hero{
+  position:relative;
   min-height:100vh;
   display:flex;
   align-items:center;
@@ -44,17 +45,24 @@ p{color:var(--muted);font-size:18px}
   text-align:center;
   color:white;
   background:
-   linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.35)),
+   linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.45)),
    url("TRIP Photos/Photo 4.jpeg") center/cover no-repeat;
 }
 
-.hero-box{max-width:900px}
-.logo{
-  width:150px;height:150px;border:2px solid rgba(255,255,255,.8);
-  display:flex;align-items:center;justify-content:center;
-  margin:0 auto 30px;font-size:14px;letter-spacing:1px
+.hero-box{
+  position:relative;
 }
-.tag{margin-top:18px;font-size:20px;opacity:.95}
+
+.hero-logo{
+  width:420px;
+  max-width:80%;
+  animation:fadeIn 1.8s ease-in-out;
+}
+
+@keyframes fadeIn{
+  from{opacity:0; transform:translateY(20px);}
+  to{opacity:1; transform:translateY(0);}
+}
 
 /* GALLERY */
 .gallery{background:white}
@@ -114,42 +122,9 @@ footer p{color:rgba(255,255,255,.85)}
 @media(max-width:900px){
  .two,.alt-row{grid-template-columns:1fr}
 }
+  
 </style>
-  .hero {
-  position: relative;
-  background-image: url('TRIP Photos/hero.jpg'); /* your hero image path */
-  background-size: cover;
-  background-position: center;
-  height: 500px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.55); /* dark overlay */
-}
-
-.hero-box {
-  position: relative;
-  text-align: center;
-}
-
-.hero-logo {
-  width: 420px;
-  max-width: 80%;
-  animation: fadeIn 1.8s ease-in-out;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-</style>
 </head>
 
 <body>
@@ -237,7 +212,7 @@ footer p{color:rgba(255,255,255,.85)}
 <section class="amen">
  <h2>Amenities</h2>
  <div class="list">
-  <div>Swiming Pool</div>
+  <div>Swimming Pool</div>
   <div>Garden seating areas</div>
   <div>Private cottages</div>
   <div>Shared lounge spaces</div>
@@ -281,6 +256,7 @@ footer p{color:rgba(255,255,255,.85)}
 
 </body>
 </html>
+
 
 
 
